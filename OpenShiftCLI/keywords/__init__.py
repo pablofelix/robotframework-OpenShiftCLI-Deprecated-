@@ -6,6 +6,7 @@ from .crds import CRDKeywords
 from .groups import GroupKeywords
 from .kfdefs import KFDEFKeywords
 from .lists import ListKeywords
+from .networkpolicies import NetworkpolicyKeywords
 from .pods import PodKeywords
 from .projects import ProjectKeywords
 from .roles import RoleKeywords

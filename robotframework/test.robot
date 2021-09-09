@@ -103,3 +103,10 @@ Test Pods Keywords
   Delete Pod  my-pod-1  namespace=test-pods
   Delete Pod  my-pod-2  namespace=test-pods
   Delete Project  test-pods
+
+Test Network Policy Keywords
+  New Project  test-networkpolicies
+  Create Network policy  test-data/networkpolicy.yaml  namespace=test-networkpolicies
+  Apply Network policy  test-data/networkpolicy.yaml  namespace=test-networkpolicies
+  Delete Network Policy  multi-port-egress  namespace=test-networkpolicies
+  Delete Project  test-networkpolicies

@@ -10,6 +10,7 @@ from OpenShiftCLI.keywords import (
     GroupKeywords,
     KFDEFKeywords,
     ListKeywords,
+    NetworkpolicyKeywords,
     PodKeywords,
     ProjectKeywords,
     RoleKeywords,
@@ -86,6 +87,13 @@ class OpenShiftCLI(DynamicCore):
             ),
             ListKeywords(
                 ApiClient('v1', 'List'),
+                DataLoader(),
+                DataParser(),
+                PlaintextFormatter(),
+                LogStreamer()
+            ),
+            NetworkpolicyKeywords(
+                ApiClient('networking.k8s.io/v1', 'NetworkPolicy'),
                 DataLoader(),
                 DataParser(),
                 PlaintextFormatter(),
